@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
@@ -24,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('add-post');
     }
 
     /**
@@ -35,7 +35,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $post = new post();
+       $post->title=$request->title;
+       $post->body=$request->body;
+       $post->save();
+       return back()->with('post-created','post has been created sucessfully!');   
     }
 
     /**
@@ -46,7 +50,8 @@ class PostController extends Controller
      */
     public function show(post $post)
     {
-        //
+        $posts =post::orderBy('id','DESC')->get();
+        return view('posts',compact('posts'));
     }
 
     /**
