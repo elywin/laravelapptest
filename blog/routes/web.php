@@ -23,3 +23,4 @@ Route::get('/add-post',[PostController::class,'create']);
 Route::post('/create-post',[PostController::class,'store'])->name('createPost');
 
 Route::get('/posts',[PostController::class,'show']);
+

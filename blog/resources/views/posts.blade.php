@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <button>Create post</button><br><br>
+    <a href="/add-post">Create post</a><br><br>
     <table>
         <thead>
             <th>ID</th>

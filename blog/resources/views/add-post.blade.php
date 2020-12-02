@@ -7,10 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="/posts">Posts</a><br><br>
     @if(Session::has('post-created'))
     <div>
         {{Session::get('post-created')}}
-    </div>
+    </div><br><br>
     @endif
 <form method="POST" action="{{route('createPost')}}">
         @csrf
