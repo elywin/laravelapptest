@@ -83,8 +83,9 @@ class PostController extends Controller
      * @param  \App\Models\post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(post $post)
+    public function destroy($id)
     {
-        //
+        post::where('id',$id)->delete();
+        return back()->with('postDelete','post hasbeen deleted');
     }
 }

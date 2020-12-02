@@ -10,6 +10,12 @@
 
 <body>
     <a href="/add-post">Create post</a><br><br>
+
+    @if(Session::has('postDelete'))
+    <div>
+        {{Session::get('postDelete')}}
+    </div><br><br>
+    @endif
     <table>
         <thead>
             <th>ID</th>
@@ -22,6 +28,7 @@
                 <td>{{ $post->id }}</td>
                 <td> {{ $post->title }}</td>
                 <td> {{ $post->body }}</td>
+            <td><a href="/delete-post/{{$post->id}}">Delete</a></td>
             </tr>
             @endforeach
 

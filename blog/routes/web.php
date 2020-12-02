@@ -24,3 +24,8 @@ Route::post('/create-post',[PostController::class,'store'])->name('createPost');
 
 Route::get('/posts',[PostController::class,'show']);
 
+Route::get('/delete-post/{id}',[PostController::class,'destroy']);
+
+
+
+
