@@ -20,7 +20,7 @@
         <thead>
             <th>ID</th>
             <th>Title</th>
-            <th>DEscription</th>
+            <th>Description</th>
         </thead>
         <tbody>
             @foreach ($posts as $post)
@@ -28,6 +28,7 @@
                 <td>{{ $post->id }}</td>
                 <td> {{ $post->title }}</td>
                 <td> {{ $post->body }}</td>
+            <td><a href="posts/{{$post->id}}">more</a></td>
             <td><a href="/delete-post/{{$post->id}}">Delete</a></td>
             </tr>
             @endforeach

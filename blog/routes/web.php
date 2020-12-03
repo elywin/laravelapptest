@@ -26,6 +26,13 @@ Route::get('/posts',[PostController::class,'show']);
 
 Route::get('/delete-post/{id}',[PostController::class,'destroy']);
 
+Route::get('/posts/{id}',[PostController::class,'getPostById']);
 
 
 
+
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

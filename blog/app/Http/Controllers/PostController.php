@@ -88,4 +88,9 @@ class PostController extends Controller
         post::where('id',$id)->delete();
         return back()->with('postDelete','post hasbeen deleted');
     }
+
+    public functioN getPostById($id){
+        $post=post::where('id',$id)->first();
+        return view('single-post',compact('post'));
+    }
 }
