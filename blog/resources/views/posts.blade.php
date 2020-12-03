@@ -10,7 +10,7 @@
 
 <body>
     <a href="/add-post">Create post</a><br><br>
-
+<a href="{{route('dashboard')}}">Dashboard</a><br><br>
     @if(Session::has('postDelete'))
     <div>
         {{Session::get('postDelete')}}

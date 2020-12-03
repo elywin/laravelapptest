@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="{{route('dashboard')}}">Dashboard</a><br><br>
     <a href="/posts">Posts</a><br><br>
     @if(Session::has('post-created'))
     <div>
